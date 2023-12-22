@@ -32,6 +32,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+*:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
 
 /* CONTAINER */
 .container {
