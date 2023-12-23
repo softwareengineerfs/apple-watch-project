@@ -70,6 +70,22 @@ padding-right: 30px;
 }
 
 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .intro {
+    background-image: url("../img/intro-bg@2x.jpg");
+  }
+
+}
+
+
+
 /* SITE HEADER*/
 .site-header {
   margin-bottom: 80px;
@@ -147,10 +163,14 @@ padding-right: 30px;
 /* INTRO IMG */
 .intro {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  padding-top: 130px;
+  padding-bottom: 185px;
 
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left calc(95%) bottom;
+
+}
 
 .general-card-content {
   display: flex;
@@ -186,6 +206,7 @@ padding-right: 30px;
   line-height: 150%; /* 24px */
 }
 .button {
+  display: inline-block;
   width: 260px;
   height: 51px;
   padding: 12px;
@@ -199,6 +220,7 @@ padding-right: 30px;
   line-height: 150%; /* 27px */
   text-transform: uppercase;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 .button:hover {
   opacity: 0.8;
