@@ -168,7 +168,7 @@ only screen and (                min-resolution: 2dppx) {
 
   background-image: url("../img/intro-bg.jpg");
   background-repeat: no-repeat;
-  background-position: left calc(95%) bottom;
+  background-position: left calc(100%) bottom;
 
 }
 
@@ -196,6 +196,7 @@ only screen and (                min-resolution: 2dppx) {
   width: 3px;
   height: 120px;
   background-color: #888;
+  border: 0;
 }
 .general-card-textr {
   width: 450px;
@@ -207,6 +208,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 .button {
   display: inline-block;
+  text-align: center;
   width: 260px;
   height: 51px;
   padding: 12px;
@@ -277,6 +279,7 @@ only screen and (                min-resolution: 2dppx) {
   width: 8px;
   height: 8px;
   background-color: #DDD;
+  border: 0;
 }
 .features-section-icons-class:not(:last-child){
   margin-right: 10px;
@@ -291,8 +294,11 @@ only screen and (                min-resolution: 2dppx) {
   width: 40px;
   height: 3px;
   background-color: #EA625C;
+  border: 0;
 }
 .features-section-link-item {
+  display: inline-flex;
+  align-items: center;
   color: #EA625C;
   font-family: var(--same-font);
   font-weight: 700;
@@ -300,12 +306,16 @@ only screen and (                min-resolution: 2dppx) {
   text-transform: uppercase;
   text-decoration: none;
 }
-.features-section-link-item:hover {
-  color: #888;
-  opacity: 0.8;
+.features-section-link-item::before {
+  width: 40px;
+  height: 3px;
+  background-color: #EA625C;
+  content: "";
+  margin-right: 10px;
+  transition: width 0.3s ease;
 }
-.features-section-link-item:active {
-  opacity: 0.6;
+.features-section-link-item:hover::before {
+  width: 60px;
 }
 
 /* INFO*/
@@ -326,6 +336,7 @@ only screen and (                min-resolution: 2dppx) {
 .info-img {
   width: 400px;
   height: 600px;
+  object-fit: cover;
 }
 
 
@@ -336,6 +347,7 @@ only screen and (                min-resolution: 2dppx) {
   background-image: url("../img/runners\ 1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 .footer-control {
   display: flex;
